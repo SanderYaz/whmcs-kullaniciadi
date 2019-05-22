@@ -18,6 +18,7 @@ WHMCS'nin minimum gereksinimlerini görmek için https://docs.whmcs.com/System_R
 - Açık kaynak
 - Özelleştirilebilir bilgi mesajları
 - Rezerve edilebilir kullanıcı adları
+- Kullanıcı adlarının uzunluğu en az 2 ve en fazla 15 olabilir
 
 ## Kurulum ##
 Projeyi herhangi bir yere klonlayabilir ya da GitHub üzerinden son sürümü indirebilirsiniz. Sürümler için [releases](https://github.com/aponkral/whmcs-kullaniciadi/releases) sayfasına göz atın.
@@ -86,6 +87,7 @@ https://docs.whmcs.com/System_Requirements
 - Open source
 - Customizable information messages
 - Reservable usernames
+- User names can have a minimum length of 2 and a maximum of 15
 
 ## Installation ##
 You can install this module by cloning the repo or downloading the latest release from GitHub. See the [releases](https://github.com/aponkral/whmcs-kullaniciadi/releases) page.
