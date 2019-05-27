@@ -1,38 +1,18 @@
 <?php
-// *************************************************************************
-// *                                                                       *
-// * WHMCS Kullanıcı Adı - The Complete Username Module    *
-// * Copyright (c) APONKRAL. All Rights Reserved,                         *
-// * Version: 1.0.1 (1.0.1release.1)                                      *
-// * BuildId: 20190522.001                                                  *
-// * Build Date: 22 May 2019                                               *
-// *                                                                       *
-// *************************************************************************
-// *                                                                       *
-// * Email: bilgi[@]aponkral.net                                                 *
-// * Website: https://aponkral.net                                         *
-// *                                                                       *
-// *************************************************************************
-// *                                                                       *
-// * This software is furnished under a license and may be used and copied *
-// * only  in  accordance  with  the  terms  of such  license and with the *
-// * inclusion of the above copyright notice.  This software  or any other *
-// * copies thereof may not be provided or otherwise made available to any *
-// * other person.  No title to and  ownership of the  software is  hereby *
-// * transferred.                                                          *
-// *                                                                       *
-// * You may not reverse  engineer, decompile, defeat  license  encryption *
-// * mechanisms, or  disassemble this software product or software product *
-// * license.  APONKRAL may terminate this license if you don't *
-// * comply with any of the terms and conditions set forth in our end user *
-// * license agreement (EULA).  In such event,  licensee  agrees to return *
-// * licensor  or destroy  all copies of software  upon termination of the *
-// * license.                                                              *
-// *                                                                       *
-// * Please see the EULA file for the full End User License Agreement.     *
-// *                                                                       *
-// *************************************************************************
-// Her şeyi sana yazdım!.. Her şeye seni yazdım!.. * Mustafa Kemal ATATÜRK
+/**
+    * WHMCS Kullanıcı Adı Modülü
+    *
+    * Turkish: WHMCS için Kullanıcı Adı modülü.
+    * English: Username module for WHMCS.
+    * Version: 1.0.2 (1.0.2release.1)
+    * BuildId: 20190527.001
+    * Build Date: 27 May 2019
+    * Email: bilgi[@]aponkral.net
+    * Website: https://aponkral.net
+    *
+    * @license Apache License 2.0
+*/
+// Her şeyi sana yazdım!.. Her şeye seni yazdım!.. *Mustafa Kemal ATATÜRK
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly. This module was made by APONKRAL.");
@@ -61,10 +41,10 @@ add_hook('ClientDetailsValidation', 1, function ($vars) use ($username_field, $r
     {
         $user_details = kullaniciadi_find_user_details($vars["email"]);
         
-        if (!isset($vars["userid"]))
-        {
-            $vars["userid"] = $user_details["id"];
-        }
+		if(isset($user_details["id"]) && !empty($user_details["id"]) && is_numeric($user_details["id"]))
+			$vars["userid"] = $user_details["id"];
+		else
+			$vars["userid"] = $_SESSION['uid'];
 
         if (!isset($vars["firstname"]))
         {
