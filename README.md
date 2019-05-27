@@ -42,7 +42,7 @@ Kurulumu tamamlamak için WHMCS admin sayfanızdan "Setup -> Addon Modules" sayf
 *Kullanıcı Adı alanı;*
 - Alan İsmi: Kullanıcı Adı
 - Alan Türü: Metin Kutusu
-- Seçenekler: Zorunlu alan, Sipariş formunda göster
+- Seçenekler: Sipariş formunda göster
 
 ## Ekran Görüntüleri ##
 ![Ekran görüntüsü 1](https://github.com/aponkral/whmcs-kullaniciadi/raw/master/screenshoots/whmcs-kullaniciadi-Screenshot-1.png "Ekran görüntüsü 1")
@@ -111,7 +111,7 @@ To complete the installation, you should go to your WHMCS admin area and click "
 *Username field;*
 - Field Name: Username
 - Field Type: Text Box
-- Options: Required field, Show on order form
+- Options: Show on order form
 
 ## Screenshoots ##
 ![Screenshot 1](https://github.com/aponkral/whmcs-kullaniciadi/raw/master/screenshoots/whmcs-kullaniciadi-Screenshot-1.png "Screenshot 1")
