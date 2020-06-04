@@ -4,22 +4,21 @@
     *
     * Turkish: WHMCS için Kullanıcı Adı modülü.
     * English: Username module for WHMCS.
-    * Version: 1.0.2 (1.0.2release.1)
-    * BuildId: 20190527.001
-    * Build Date: 27 May 2019
+    * Version: 1.0.3 (1.0.3release.1)
+    * BuildId: 20200604.001
+    * Build Date: 04 Jun 2020
     * Email: bilgi[@]aponkral.net
-    * Website: https://aponkral.net
+    * Website: https://aponkral.dev
     *
     * @license Apache License 2.0
 */
 // Her şeyi sana yazdım!.. Her şeye seni yazdım!.. *Mustafa Kemal ATATÜRK
 
 if (!defined("WHMCS")) {
-	die("This file cannot be accessed directly. This module was made by APONKRAL.");
-exit();
+	exit("This file cannot be accessed directly. This module was made by Aponkral.");
 }
 
-require_once('helpers.php');
+require_once __DIR__."/helpers.php";
 
 function kullaniciadi_config() {
 	$db_field_names = str_putcsv(kullaniciadi_get_custom_fields());
@@ -27,9 +26,9 @@ function kullaniciadi_config() {
 	"name" => "Kullanıcı Adı",
 	"description" => "WHMCS için kullanıcı adı modülü.",
 	"premium" => true,
-	"version" => "1.0.2",
-	"author" => "APONKRAL",
-	"link" => "https://aponkral.net/",
+	"version" => "1.0.3",
+	"author" => "Aponkral",
+	"link" => "https://aponkral.dev/",
 	"language" => "turkish",
 		"fields" => [
 			"username_field" => [
